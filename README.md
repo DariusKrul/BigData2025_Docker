@@ -59,7 +59,3 @@ This mounts your local CSV into the container and writes the output files back t
 ## Utility test
 
 A `sample.csv` was created with two columns (`col1`, `col2`) and two rows of data. Running the container against it produces all output files listed above. The `correlations.csv` is skipped when fewer than 2 numeric columns are present.
-
-## Issues encountered
-
-During the build, `pandas==2.2.4` was initially specified in `requirements.txt` but this version does not exist on PyPI — the 2.x line ends at `2.2.3`. The requirements file was corrected to `pandas==2.2.3` and the build completed successfully.
