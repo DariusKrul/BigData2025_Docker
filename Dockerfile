@@ -1,9 +1,8 @@
-FROM python:3.11-slim
+FROM python:3.13-slim
 
-# Install build tools for pandas / pyarrow wheels when necessary
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends gcc \
-    && rm -rf /var/lib/apt/lists/*
+LABEL maintainer="kruel1" \
+      version="2.0" \
+      description="CSV statistics CLI – summary, missing values, correlations, dtypes"
 
 WORKDIR /app
 
